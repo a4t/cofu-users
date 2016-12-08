@@ -1,0 +1,11 @@
+{
+  "name": "user2",
+  "uid": 1002,
+  "password": "fugafuga",
+  "public_keys": [
+    "ssh-rsa yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+  ],
+  "shell": "/bin/bash",
+  "editor": "vim",
+  "wheel": true
+}

@@ -1,0 +1,11 @@
+version: '2.0'
+networks: {}
+
+services:
+  cofu-users:
+    build: ./
+    volumes:
+      - ./:/var/cofu-users/
+    environment:
+      - USERS_DIR=/var/cofu-users/users_sample
+
