@@ -14,19 +14,16 @@ $ chmod 744 /usr/local/sbin/cofu
 
 ```users.json
 {
-  "users": {
-    "hoge": {
-      "uid": 1001,
-      "password": "hogehoge",
-      "public_keys": [
-        "ssh-rsa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
-        "ssh-rsa yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
-      ],
-      "shell": "/bin/bash",
-      "editor": "vim",
-      "wheel": true
-    }
-  }
+  "name": "hoge",
+  "uid": 1001,
+  "password": "hogehoge",
+  "public_keys": [
+    "ssh-rsa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+    "ssh-rsa yyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy"
+  ],
+  "shell": "/bin/bash",
+  "editor": "vim",
+  "wheel": true
 }
 ```
 
