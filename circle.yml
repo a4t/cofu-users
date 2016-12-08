@@ -1,0 +1,12 @@
+chine:
+  services:
+    - docker
+
+dependencies:
+  override:
+    - docker info
+    - docker build --rm=false -t a4t/cofu-users .
+
+test:
+  override:
+    - docker run -e "USERS_DIR=/var/cofu-users/users_sample" -v "$(pwd):/var/cofu-users/" a4t/cofu-users 
