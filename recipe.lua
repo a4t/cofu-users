@@ -28,9 +28,9 @@ execute "reset public uservar.names" {
 }
 
 for num, public_key in pairs(var.public_keys) do
-  execute 'set public key' do
+  execute 'set public key' {
     command = "echo "..public_key.." >> /home/"..var.name.."/.ssh/authorized_keys"
-  end
+  }
 end
 
 file ("/home/"..var.name.."/.ssh/authorized_keys") {
