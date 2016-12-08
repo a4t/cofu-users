@@ -1,4 +1,4 @@
-chine:
+machine:
   services:
     - docker
 
