@@ -6,6 +6,3 @@ services:
     build: ./
     volumes:
       - ./:/var/cofu-users/
-    environment:
-      - USERS_DIR=/var/cofu-users/users_sample
-

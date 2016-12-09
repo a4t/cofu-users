@@ -1,3 +1,5 @@
+![build status](https://circleci.com/gh/a4t/cofu-users.svg?style=shield&circle-token=0cf1ef23cf01e583e48d1d831487fdd4662caaf8)
+
 # cofu-users
 Minimum user account management tool.
 
@@ -28,5 +30,5 @@ $ chmod 744 /usr/local/sbin/cofu
 ```
 
 ```
-$ cofu -var-file=users.json recipe.lua
+$ cofu -var-file=sample/user1.json recipe.lua
 ```
