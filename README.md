@@ -31,5 +31,5 @@ $ chmod 744 /usr/local/sbin/cofu
 ```
 
 ```
-$ cofu -var-file=users.json recipe.lua
+$ cofu -var-file=users/user1.json recipe.lua
 ```
