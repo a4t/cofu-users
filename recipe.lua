@@ -19,7 +19,7 @@ file ("/home/"..var.name.."/.ssh/config") {
   content = [=[
 ForwardAgent yes
 host github.com
-    StrictHostuservar.nameChecking no
+    StrictHostKeyChecking no
 ]=]
 }
 
