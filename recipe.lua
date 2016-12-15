@@ -1,9 +1,14 @@
 user (var.name) {
   uid = var.uid,
-  password = var.password,
   shell = var.shell,
   create_home = true,
 }
+
+if var.password ~= nil then
+  user (var.name) {
+    password = var.password,
+  }
+end
 
 if var.gid ~= nil then
   user (var.name) {
