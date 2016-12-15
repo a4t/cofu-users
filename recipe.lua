@@ -5,16 +5,22 @@ user (var.name) {
   create_home = true,
 }
 
+if var.gid ~= nil then
+  user (var.name) {
+    gid = var.gid,
+  }
+end
+
 directory ("/home/"..var.name.."/.ssh") {
   action = "create",
   mode = "0700",
   owner = var.name,
-  group = var.name,
+  group = var.gid,
 }
 
 file ("/home/"..var.name.."/.ssh/config") {
   owner = var.name,
-  group = var.name,
+  group = var.gid,
   mode = '644',
   content = [=[
 ForwardAgent yes
@@ -35,7 +41,7 @@ end
 
 file ("/home/"..var.name.."/.ssh/authorized_keys") {
   owner = var.name,
-  group = var.name,
+  group = var.gid,
   mode = '600',
 }
 

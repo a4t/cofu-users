@@ -9,4 +9,4 @@ dependencies:
 
 test:
   override:
-    - docker run -v "$(pwd):/var/cofu-users/" a4t/cofu-users 
+    - docker run -v "$(pwd):/var/cofu-users/" a4t/cofu-users
