@@ -1,14 +1,9 @@
 user (var.name) {
   uid = var.uid,
   shell = var.shell,
+  password = var.password,
   create_home = true,
 }
-
-if var.password ~= nil then
-  user (var.name) {
-    password = var.password,
-  }
-end
 
 if var.gid ~= nil then
   user (var.name) {
@@ -51,11 +46,17 @@ file ("/home/"..var.name.."/.ssh/authorized_keys") {
 }
 
 if var.wheel then
+  if var.nopasswd == true then
+    sudo_permission = 'ALL=(ALL) NOPASSWD:ALL'
+  else
+    sudo_permission = 'ALL=(ALL) ALL'
+  end
+
   file ("/etc/sudoers.d/"..var.name) {
     owner = 'root',
     group = 'root',
     mode = '644',
-    content = var.name.." ALL=(ALL) ALL"
+    content = var.name.." "..sudo_permission
   }
 else
   file ("/etc/sudoers.d/"..var.name) {
