@@ -1,6 +1,7 @@
 {
   "name": "user1",
   "uid": 1001,
+  "gid": 200,
   "password": "hogehoge",
   "public_keys": [
     "ssh-rsa xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
