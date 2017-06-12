@@ -10,6 +10,7 @@ $ wget https://github.com/kohkimakimoto/cofu/releases/download/v0.2.0/cofu_linux
 $ unzip cofu_linux_amd64.zip
 $ mv cofu /usr/local/sbin/cofu
 $ chmod 744 /usr/local/sbin/cofu
+$ git clone https://github.com/a4t/cofu-users.git
 ```
 
 ## Usage
