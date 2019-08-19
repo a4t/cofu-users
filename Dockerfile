@@ -3,7 +3,7 @@ FROM ubuntu:16.04
 MAINTAINER Shigure Onishi <onishishigure@gmail.com>
 WORKDIR /tmp
 
-ENV COFU_VERSION=v0.2.0
+ENV COFU_VERSION=v0.15.0
 
 RUN \
   apt-get update && \
